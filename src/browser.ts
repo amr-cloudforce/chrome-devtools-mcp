@@ -22,9 +22,6 @@ let browser: Browser | undefined;
 
 function makeTargetFilter(enableExtensions = false) {
   const ignoredPrefixes = new Set(['chrome://', 'chrome-untrusted://']);
-  if (!enableExtensions) {
-    ignoredPrefixes.add('chrome-extension://');
-  }
 
   return function targetFilter(target: Target): boolean {
     if (target.url() === 'chrome://newtab/') {

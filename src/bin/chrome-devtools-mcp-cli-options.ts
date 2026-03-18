@@ -211,7 +211,7 @@ export const cliOptions = {
   },
   categoryExtensions: {
     type: 'boolean',
-    default: false,
+    default: true,
     hidden: true,
     describe: 'Set to false to exclude tools related to extensions.',
   },
